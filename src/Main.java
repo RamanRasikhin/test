@@ -7,6 +7,6 @@ public class Main {
         String s=String.format("%f", point.x);
         System.out.println(s);
     };
-    int array[]=new int[4]{ 0, 1, 2, 3, 4};
+    int array[]=new int[]{ 0, 1, 2, 3, 4};
 
 }
