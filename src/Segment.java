@@ -21,5 +21,9 @@ public class Segment {
     public Point getSecond() {
         return second;
     }
+    public double getDist(){
+        return Math.hypot(first.x- second.x, first.y- second.y);
+      //  return Math.sqrt(Math.pow(first.x- second.x, 2)+Math.pow(first.y- second.y, 2));
+    }
 
 }
