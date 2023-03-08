@@ -3,11 +3,11 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class SvgScene {
-     private ArrayList<Polygon> polygons=new ArrayList<>();
+     private ArrayList<Shape> shapes=new ArrayList<>();
      private int height=0, width=0;
-     public void addPolygon(Polygon polygon) {
-          polygons.add(polygon);
-          Point maxPoint = polygon.getMaxCords();
+     public void addPolygon(Shape shape) {
+          shapes.add(shape);
+          Point maxPoint = shape.getMaxCords();
           if (width < maxPoint.x)
           {
                width=(int) maxPoint.x + 1;
@@ -19,8 +19,8 @@ public class SvgScene {
      }
      public void save(String filename){
           String svg=String.format(Locale.ENGLISH, "<svg width =\"%d\" height=\"%d\">", width, height);
-          for (Polygon polygon : polygons){
-               svg+=polygon.toSvg();
+          for (Shape shape : shapes){
+               svg+=shape.toSvg();
           }
           svg+="</svg>";
           try {
