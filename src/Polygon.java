@@ -27,6 +27,19 @@ public class Polygon {
 
         return String.format(Locale.ENGLISH,"<polygon points=\"%s\" style = \"%s\" />", pointsString, styleSettings.toSVG());
     }
-
+    public Point getMaxCords(){
+        Point results =new Point(0,0);
+        for (Point point : arr){
+            if (point.x > results.x)
+            {
+                results.x = point.x;
+            }
+            if (point.y > results.y)
+            {
+                results.y = point.y;
+            }
+        }
+        return results;
+    }
 
 }
