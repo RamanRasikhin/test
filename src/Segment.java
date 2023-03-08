@@ -13,7 +13,6 @@ public class Segment {
     public Point getP1() {
         return p1;
     }
-
     public Point getP2() {
         return p2;
     }

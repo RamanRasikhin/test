@@ -16,7 +16,6 @@ public class SvgScene {
           {
                height=(int) maxPoint.y + 1;
           }
-
      }
      public void save(String filename){
           String svg=String.format(Locale.ENGLISH, "<svg width =\"%d\" height=\"%d\">", width, height);

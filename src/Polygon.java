@@ -19,7 +19,6 @@ public class Polygon {
     public void setPoints(Point[] points){
         arr = points;
     }
-
     public String toSvg() {
         String pointsString = "";
         for(Point point : arr)
